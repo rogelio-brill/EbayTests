@@ -1,3 +1,5 @@
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -21,13 +23,15 @@ public class Watchlist {
         options.addArguments("--disable-extensions");
         driver = new ChromeDriver(options);
 		//driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//driver.manage().window().maximize();
 	}
 	
 	@BeforeMethod
 	public void openBrowser() {
 		driver.get("https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fwww.ebay.com%2Fmye%2Fmyebay%2Fwatchlist");
+		//new WebDriverWait(driver, 10).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe[starts-with(@name, 'a-') and starts-with(@src, 'https://www.google.com/recaptcha')]")));
+		new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.id("//*[@id=\"checkbox\"]"))).click();
 		driver.findElement(By.id("userid")).sendKeys("rogelio.aguilar@brillio.com");
 		driver.findElement(By.id("signin-continue-btn")).click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
