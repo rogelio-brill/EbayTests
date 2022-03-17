@@ -15,7 +15,7 @@ public class EbayAutomation {
 
     @BeforeClass
     public void testSetup() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\rogelio.aguilar\\chromedriver_win32\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\rogelio.aguilar\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
