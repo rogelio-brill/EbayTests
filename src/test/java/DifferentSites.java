@@ -2,87 +2,37 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 import static io.restassured.RestAssured.given;
 
 public class DifferentSites {
-//    @BeforeClass(groups = "product_api")
-//    public void setup() {
-//        // Base URL/URI for all REST API requests
-//        RestAssured.baseURI = "https://www.ebay.com";
-//    }
 
-    @Test
-    public void USA_Site() throws IOException {
-        System.out.println("Response for getting the US Ebay website :");
+    @Test()
+    @Parameters({ "site" })
+    public void test_Site(@Optional String site) throws IOException {
+        System.out.println("Response for getting the "+ site +" Ebay website :");
+
+        InputStream is;
+        if (site == null) {
+            is = DifferentSites.class.getResourceAsStream("/us.properties");
+        }else {
+           is =  DifferentSites.class.getResourceAsStream("/"+site+".properties");
+        }
         Properties prop = new Properties();
-        FileInputStream fis = new FileInputStream("global.properties");
-        prop.load(fis);
+        prop.load(is);
 
         Response res = given()
                 .relaxedHTTPSValidation()
                 .contentType(ContentType.JSON)
                 .baseUri(prop.getProperty("baseUrl")).
         when().get();
-
-        int code = res.getStatusCode();
-        Assert.assertEquals(code, 200);
-    }
-
-    @Test
-    public void MX_Site() throws IOException {
-        System.out.println("Response for getting the MX Ebay website :");
-        Properties prop = new Properties();
-        FileInputStream fis = new FileInputStream("global.properties");
-        prop.load(fis);
-
-        Response res = given()
-                .relaxedHTTPSValidation()
-                .contentType(ContentType.JSON)
-                .baseUri(prop.getProperty("MXUrl")).
-                when().get();
-
-        int code = res.getStatusCode();
-        Assert.assertEquals(code, 200);
-    }
-
-    @Test
-    public void UK_Site() throws IOException {
-        System.out.println("Response for getting the UK Ebay website :");
-        Properties prop = new Properties();
-        FileInputStream fis = new FileInputStream("global.properties");
-        prop.load(fis);
-
-        Response res = given()
-                .relaxedHTTPSValidation()
-                .contentType(ContentType.JSON)
-                .baseUri(prop.getProperty("UKUrl")).
-                when().get();
-
-        int code = res.getStatusCode();
-        Assert.assertEquals(code, 200);
-    }
-
-    @Test
-    public void AU_Site() throws IOException {
-        System.out.println("Response for getting the AU Ebay website :");
-        Properties prop = new Properties();
-        FileInputStream fis = new FileInputStream("global.properties");
-        prop.load(fis);
-
-        Response res = given()
-                .relaxedHTTPSValidation()
-                .contentType(ContentType.JSON)
-                .baseUri(prop.getProperty("AUUrl")).
-                when().get();
 
         int code = res.getStatusCode();
         Assert.assertEquals(code, 200);
