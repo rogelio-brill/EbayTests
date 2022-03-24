@@ -1,3 +1,5 @@
+package testCases;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -45,7 +47,7 @@ public class Watchlist {
 	public void loadWatchlistPage() {
 		driver.get("https://www.ebay.com/mye/myebay/watchlist");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		System.out.println("Loaded Watchlist Page");
+		System.out.println("Loaded testCases.Watchlist Page");
 	}
 	
 	//@Test(priority=2)

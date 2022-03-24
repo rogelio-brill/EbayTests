@@ -6,12 +6,12 @@
     <groups>
     </groups>
     <test started-at="2022-02-25T09:44:43 PST" name="Default test" finished-at="2022-02-25T09:44:57 PST" duration-ms="13892">
-      <class name="Watchlist">
-        <test-method is-config="true" signature="testSetup()[pri:0, instance:Watchlist@384ad17b]" started-at="2022-02-25T09:44:43 PST" name="testSetup" finished-at="2022-02-25T09:44:47 PST" duration-ms="3800" status="PASS">
+      <class name="testCases.Watchlist">
+        <test-method is-config="true" signature="testSetup()[pri:0, instance:testCases.Watchlist@384ad17b]" started-at="2022-02-25T09:44:43 PST" name="testSetup" finished-at="2022-02-25T09:44:47 PST" duration-ms="3800" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetup -->
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:Watchlist@384ad17b]" started-at="2022-02-25T09:44:47 PST" name="openBrowser" finished-at="2022-02-25T09:44:57 PST" duration-ms="10037" status="FAIL">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.Watchlist@384ad17b]" started-at="2022-02-25T09:44:47 PST" name="openBrowser" finished-at="2022-02-25T09:44:57 PST" duration-ms="10037" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#userid"}
@@ -50,7 +50,7 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-at Watchlist.openBrowser(Watchlist.java:33)
+at testCases.Watchlist.openBrowser(testCases.Watchlist.java:33)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -89,7 +89,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="loadWatchlistPage()[pri:1, instance:Watchlist@384ad17b]" started-at="2022-02-25T09:44:57 PST" name="loadWatchlistPage" finished-at="2022-02-25T09:44:57 PST" duration-ms="0" status="SKIP">
+        <test-method signature="loadWatchlistPage()[pri:1, instance:testCases.Watchlist@384ad17b]" started-at="2022-02-25T09:44:57 PST" name="loadWatchlistPage" finished-at="2022-02-25T09:44:57 PST" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#userid"}
@@ -128,7 +128,7 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-at Watchlist.openBrowser(Watchlist.java:33)
+at testCases.Watchlist.openBrowser(testCases.Watchlist.java:33)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -167,11 +167,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadWatchlistPage -->
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:Watchlist@384ad17b]" started-at="2022-02-25T09:44:57 PST" name="openBrowser" finished-at="1969-12-31T16:00:00 PST" duration-ms="-1645811097747" status="SKIP">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.Watchlist@384ad17b]" started-at="2022-02-25T09:44:57 PST" name="openBrowser" finished-at="1969-12-31T16:00:00 PST" duration-ms="-1645811097747" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="openWatchlistDropdown()[pri:2, instance:Watchlist@384ad17b]" started-at="2022-02-25T09:44:57 PST" name="openWatchlistDropdown" finished-at="2022-02-25T09:44:57 PST" duration-ms="0" status="SKIP">
+        <test-method signature="openWatchlistDropdown()[pri:2, instance:testCases.Watchlist@384ad17b]" started-at="2022-02-25T09:44:57 PST" name="openWatchlistDropdown" finished-at="2022-02-25T09:44:57 PST" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#userid"}
@@ -210,7 +210,7 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-at Watchlist.openBrowser(Watchlist.java:33)
+at testCases.Watchlist.openBrowser(testCases.Watchlist.java:33)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -249,11 +249,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openWatchlistDropdown -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Watchlist@384ad17b]" started-at="2022-02-25T09:44:57 PST" name="afterClass" finished-at="1969-12-31T16:00:00 PST" duration-ms="-1645811097752" status="SKIP">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:testCases.Watchlist@384ad17b]" started-at="2022-02-25T09:44:57 PST" name="afterClass" finished-at="1969-12-31T16:00:00 PST" duration-ms="-1645811097752" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- Watchlist -->
+      </class> <!-- testCases.Watchlist -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

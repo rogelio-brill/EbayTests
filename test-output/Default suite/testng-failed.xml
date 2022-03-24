@@ -3,7 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Watchlist">
+      <class name="testCases.Watchlist">
         <methods>
           <include name="afterClass"/>
           <include name="openBrowser"/>
@@ -11,7 +11,7 @@
           <include name="openWatchlistDropdown"/>
           <include name="testSetup"/>
         </methods>
-      </class> <!-- Watchlist -->
+      </class> <!-- testCases.Watchlist -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -3,16 +3,23 @@
 
 <suite name="Suite">
 
-    <test thread-count="5" name="TestUS">
+    <test thread-count="5" name="TestNoParam">
         <classes>
-            <class name="DifferentSites" />
+            <class name="testCases.DifferentSites" />
         </classes>
     </test>
 
     <test thread-count="5" name="TestUK">
         <parameter name="site" value="uk"></parameter>
         <classes>
-            <class name="DifferentSites" />
+            <class name="testCases.DifferentSites" />
+        </classes>
+    </test>
+
+    <test thread-count="5" name="TestDE">
+        <parameter name="site" value="de"></parameter>
+        <classes>
+            <class name="testCases.DifferentSites" />
         </classes>
     </test>
 
